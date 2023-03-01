@@ -36,21 +36,32 @@ Board.DIRS = [
  * Checks if a given position is on the Board.
  */
 Board.prototype.isValidPos = function (pos) {
-    let y = pos[0];
-    let x = pos[1];
-    if (0 <= x && x <= 7 && 0 <= y && y <= 7) {
+    let row = pos[0];
+    let col = pos[1];
+    if (0 <= col && col <= 7 && 0 <= row && row <= 7) {
       return true;
     } else {
-    return false;}
-
+      return false;
+    };
   };
 
 /**
  * Returns the piece at a given [x, y] position,
  * throwing an Error if the position is invalid.
  */
-Board.prototype.getPiece = function () {
-    
+
+// Board.prototype.pos = function(x, y) {
+//   return this.grid[y][x];
+// }
+
+Board.prototype.getPiece = function (pos) {
+  let row = pos[0];
+  let col = pos[1];
+  if (this.isValidPos(pos)) {
+    return this.grid[row][col];
+  } else {
+    throw new Error('Not valid pos!');
+  }
 };
 
 /**
