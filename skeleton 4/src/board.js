@@ -9,8 +9,16 @@ if (typeof window === 'undefined'){
  * and two white pieces at [3, 3] and [4, 4]
  */
 function _makeGrid () {
+  const board = Array(8);
+  for (let i = 0; i < 8; i++) {
+    board[i] = Array(8);
+  }
+  board[3][4] = new Piece("black");
+  board[4][3] = new Piece("black");
+  board[3][3] = new Piece("white");
+  board[4][4] = new Piece("white");
+  return board;
 }
-
 /**
  * Constructs a Board with a starting grid set up.
  */
@@ -28,26 +36,34 @@ Board.DIRS = [
  * Checks if a given position is on the Board.
  */
 Board.prototype.isValidPos = function (pos) {
-};
+    let y = pos[0];
+    let x = pos[1];
+    if (0 <= x && x <= 7 && 0 <= y && y <= 7) {
+      return true;
+    } else {
+    return false;}
+
+  };
 
 /**
  * Returns the piece at a given [x, y] position,
  * throwing an Error if the position is invalid.
  */
-Board.prototype.getPiece = function (pos) {
+Board.prototype.getPiece = function () {
+    
 };
 
 /**
  * Checks if the piece at a given position
  * matches a given color.
  */
-Board.prototype.isMine = function (pos, color) {
+Board.prototype.isMine = function () {
 };
 
 /**
  * Checks if a given position has a piece on it.
  */
-Board.prototype.isOccupied = function (pos) {
+Board.prototype.isOccupied = function () {
 };
 
 /**
@@ -63,7 +79,7 @@ Board.prototype.isOccupied = function (pos) {
  *
  * Returns empty array if no pieces of the opposite color are found.
  */
-Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip){
+Board.prototype._positionsToFlip = function(){
 };
 
 /**
@@ -71,7 +87,7 @@ Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip){
  * taking the position will result in some pieces of the opposite
  * color being flipped.
  */
-Board.prototype.validMove = function (pos, color) {
+Board.prototype.validMove = function () {
 };
 
 /**
@@ -80,20 +96,20 @@ Board.prototype.validMove = function (pos, color) {
  *
  * Throws an error if the position represents an invalid move.
  */
-Board.prototype.placePiece = function (pos, color) {
+Board.prototype.placePiece = function () {
 };
 
 /**
  * Produces an array of all valid positions on
  * the Board for a given color.
  */
-Board.prototype.validMoves = function (color) {
+Board.prototype.validMoves = function () {
 };
 
 /**
  * Checks if there are any valid moves for the given color.
  */
-Board.prototype.hasMove = function (color) {
+Board.prototype.hasMove = function () {
 };
 
 
