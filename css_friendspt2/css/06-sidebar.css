@@ -1,27 +1,37 @@
 /* PHASE 0: Sidebar */
 
-.profile {
-    justify-content: center;
+.content-sidebar {
+    /* justify-content: center; */
     position: relative;
-    bottom: 150px;
+    bottom: 120px;
 }
 
 
-.profile > .profile-picture {
-    /* display: flex; */
+/* .profile > .profile-picture {
+    display: flex;
     position: absolute;
     width: 160px;
-    bottom: 100px
-    
-}
+    bottom: 100px;
+}  */
 
 .profile-info {
-
-
+    /* display: block; */
+    padding-top: 20px;
 }
 
 .profile-nav {
-    position: relative;
+    /* display: block; */
+    /* position: relative; */
     bottom: 40px;
+    padding-top: 20px;
+    border-bottom: 1px solid lightgray;
+}
 
+.profile-nav ul li {
+    border-top: 1px solid lightgray;
+    padding: 5px;
+}
+
+.profile-nav ul li:hover {
+    background-color: lightblue;
 }
