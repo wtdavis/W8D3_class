@@ -1,1 +1,27 @@
 /* PHASE 0: Sidebar */
+
+.profile {
+    justify-content: center;
+    position: relative;
+    bottom: 150px;
+}
+
+
+.profile > .profile-picture {
+    /* display: flex; */
+    position: absolute;
+    width: 160px;
+    bottom: 100px
+    
+}
+
+.profile-info {
+
+
+}
+
+.profile-nav {
+    position: relative;
+    bottom: 40px;
+
+}
